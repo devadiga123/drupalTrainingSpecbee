@@ -1,0 +1,11 @@
+<?php
+/*
+/**hook_theme() implementation.
+*/
+function article_theme($existing, $type, $theme, $path) {
+  return [
+    'my_theme' => [
+      'variables' => ['node' => NULL],
+    ],
+  ];
+}

@@ -1,0 +1,138 @@
+body {
+  background-color: #696969;
+  height: 100%;
+  font-family: Georgia;
+  margin: 0;
+  padding: 0; }
+
+.header {
+  background-color: #61D08C;
+  height: 10px;
+  width: 100%; }
+
+.heading {
+  margin-left: 50px;
+  margin-top: 60px;
+  float: left; }
+
+.moderist {
+  padding-left: 50px;
+  font-size: 36px;
+  color: white;
+  margin: 2px 5px; }
+
+.psd {
+  margin: 2px 5px;
+  margin-left: 55px;
+  font-size: 15px;
+  color: white; }
+
+.menus {
+  float: right;
+  font-size: 18px;
+  margin-top: 65px;
+  margin-right: 60px; }
+
+nav ul {
+  margin-top: 0px; }
+
+nav ul li {
+  color: white;
+  display: inline-block;
+  list-style-type: none;
+  margin-left: 35px; }
+
+.links {
+  text-decoration: none;
+  color: white;
+  display: block;
+  padding: 10px;
+  border-radius: 10px;
+  text-align: center;
+  color: white;
+  display: inline-block; }
+
+.links:hover {
+  background-color: #61D08C; }
+
+.left-content {
+  margin-left: 0px;
+  position: absolute;
+  top: 30%;
+  left: 20%;
+  float: left; }
+
+.right-content {
+  float: right; }
+
+.image {
+  position: absolute;
+  left: 50%;
+  top: 30%;
+  height: 320px;
+  width: 320px;
+  border: 20px solid black;
+  background-image: url("../images/dog.jpg");
+  border-radius: 50%;
+  background-size: contain; }
+
+h1 {
+  color: white;
+  font-size: 45px; }
+
+.para {
+  color: white;
+  font-size: 16px;
+  line-height: 20px; }
+
+.button {
+  background-color: #61D08C;
+  border: none;
+  color: white;
+  padding: 10px;
+  text-align: center;
+  font-size: 16px;
+  width: 170px;
+  border-radius: 20px; }
+
+@media (max-width: 768px) {
+  .image {
+    position: absolute;
+    left: 50%;
+    top: 30%;
+    height: 100px;
+    width: 100px;
+    border: 5px solid black;
+    background-image: url("../images/dog.jpg");
+    border-radius: 50%;
+    background-size: contain; }
+
+  h1 {
+    color: white;
+    font-size: 25px; }
+
+  .para {
+    color: white;
+    font-size: 10px;
+    line-height: 10px; }
+
+  .button {
+    background-color: #61D08C;
+    border: none;
+    color: white;
+    padding: 10px;
+    text-align: center;
+    font-size: 16px;
+    width: 150px;
+    border-radius: 20px; }
+
+  .links {
+    text-decoration: none;
+    color: white;
+    padding: 5px;
+    border-radius: 10px;
+    text-align: center;
+    color: white;
+    display: inline-block; } }
+
+/*# sourceMappingURL=main.css.map */

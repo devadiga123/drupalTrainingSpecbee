@@ -1,0 +1,8 @@
+article.content:
+  path: '/article/{node}'
+  defaults:
+    _controller: 'Drupal\article\Controller\articleController::content'
+  requirements:
+    _custom_access: 'Drupal\article\Controller\articleController::access'
+
+

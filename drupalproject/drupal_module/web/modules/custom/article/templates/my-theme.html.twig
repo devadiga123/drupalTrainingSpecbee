@@ -1,0 +1,10 @@
+
+{{ attach_library('article/article_css') }}
+<div>
+    <h1 style="text-align: center;font-size: 25px;font-weight: bolder;">{{ node.title }}</h1>
+    <p> {{ node.body }} </p>
+
+   <img src="{{ node.img_path }}" width="60%" height="40%" alt="imge">
+   <br/><b>Tags</b>
+<a href="http://drupal_module.conf/taxonomy/term/{{ node.tid }}">{{ node.term }}</a>
+</div>

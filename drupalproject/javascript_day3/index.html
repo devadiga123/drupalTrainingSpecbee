@@ -1,0 +1,205 @@
+<!-- Author Name:Akshay D -->
+<!-- Code for calculator without precedence -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <link href="css/bootstrap.min.css" rel="stylesheet">
+  <link href="css/main.css" rel="stylesheet">
+  <script src="js/jquery.min.js"></script>
+  <script src="js/bootstrap.min.js"></script>
+  <script>
+
+    // function to take numbers input
+    function numbers(element) {
+
+      document.getElementById('input-num').value += element;
+    }
+
+
+    // fuction desc:For AC button to clear the value
+    function clr() {
+      document.getElementById('input-num').value = "";
+      document.getElementById('input-res').value = "0";
+    }
+
+
+    //  function desc:This function perform the operation on input elements
+    function perform_calculation() {
+      var result = array_devide(document.getElementById('input-num').value);
+      console.log(result);
+      while (result.length > 1) {
+
+        var operand1 = result.shift();
+        var operator = result.shift();
+        var operand2 = result.shift();
+        var output;
+        switch (operator) {
+          case "*": output = operand1 * operand2;
+            result.unshift(output);
+            break;
+          case "/": output = operand1 / operand2;
+            result.unshift(output);
+            break;
+          case "+": output = operand1 + operand2;
+            result.unshift(output);
+            break;
+          case "-": output = operand1 - operand2;
+            result.unshift(output);
+            break;
+          case "%": output = operand1 % operand2;
+            result.unshift(output);
+            break;
+
+        }
+      }
+      document.getElementById('input-res').value = result;
+    }
+
+
+
+    // function to devide the string into array.
+      // input_string:It consisting of expression with arithmetic operations.
+      function array_devide(input_string) {
+        var calculation = [],
+          current = '';
+        for (var i = 0, ch; ch = input_string.charAt(i); i++) {
+          if ('%*/+-'.indexOf(ch) > -1) {
+            if (current == '' && ch == '-') {
+              current = '-';
+            } else {
+              calculation.push(parseFloat(current), ch);
+              current = '';
+            }
+          } else {
+            current += input_string.charAt(i);
+          }
+        }
+        if (current != '') {
+          calculation.push(parseFloat(current));
+        }
+        return calculation;
+
+
+      }
+
+  </script>
+</head>
+
+<body>
+  <div class="container">
+    <div class="col-xs-4  calc text-center ">
+      <div>
+        <div>
+          <form>
+            <input type="text" class="input-operation text-right" id="input-num">
+            <input type="text" value="=" class="input-result" id="input-res">
+          </form>
+        </div>
+        <!-- first-row -->
+        <div class="col-xs-3 column-padding">
+          <button class="btn-calc"  onclick='clr()'>
+            <b>AC</b>
+          </button>
+        </div>
+        <div class="col-xs-3 column-padding">
+          <button class="btn-calc"  onclick='numbers("+/-")'>
+            <b>+/-</b>
+          </button>
+        </div>
+        <div class="col-xs-3 column-padding">
+          <button class="btn-calc" onclick='numbers("%")'>
+            <b>%</b>
+          </button>
+        </div>
+        <div class="col-xs-3 column-padding">
+          <button class="btn-calc" onclick='numbers("*")'>
+            <b>X</button>
+        </div>
+        <!-- second row -->
+        <div class="col-xs-3 column-padding">
+          <button class="btn-num" onclick='numbers(1)'>
+            <b>1</b>
+          </button>
+        </div>
+        <div class="col-xs-3 column-padding">
+          <button class="btn-num" onclick='numbers(2)'>
+            <b>2</b>
+          </button>
+        </div>
+        <div class="col-xs-3 column-padding">
+          <button class="btn-num" onclick='numbers(3)'>
+            <b>3</b>
+          </button>
+        </div>
+        <div class="col-xs-3 column-padding">
+          <button class="btn-calc" onclick='numbers("/")'>
+            <b>/</b>
+          </button>
+        </div>
+        <!-- third row -->
+        <div class="col-xs-3 column-padding">
+          <button class="btn-num" onclick='numbers(4)'>
+            <b>4</b>
+          </button>
+        </div>
+        <div class="col-xs-3 column-padding">
+          <button class="btn-num" onclick='numbers(5)'>
+            <b>5</b>
+          </button>
+        </div>
+        <div class="col-xs-3 column-padding">
+          <button class="btn-num" onclick='numbers(6)'>
+            <b>6</b>
+          </button>
+        </div>
+        <div class="col-xs-3 column-padding">
+          <button class="btn-calc" onclick='numbers("-")'>
+            <b> -</b>
+          </button>
+        </div>
+        <!-- fourth row -->
+        <div class="col-xs-3 column-padding">
+          <button class="btn-num" onclick='numbers(7)'> 7</button>
+        </div>
+        <div class="col-xs-3 column-padding ">
+          <button class="btn-num" onclick='numbers(8)'>
+            <b>8</b>
+          </button>
+        </div>
+        <div class="col-xs-3 column-padding">
+          <button class="btn-num" onclick='numbers(9)'>
+            <b>9</b>
+          </button>
+        </div>
+        <div class="col-xs-3 column-padding">
+          <button class="btn-calc" onclick='numbers("+")'>
+            <b></b> +</button>
+        </div>
+        <!-- last row -->
+        <div class="col-xs-6 column-padding">
+          <button class="btn-zero" onclick='numbers(0)'>
+            <b></b> 0</button>
+        </div>
+        <div class="col-xs-3 column-padding">
+          <button class="btn-num" onclick='numbers(".")'>
+            <b> .</b>
+          </button>
+        </div>
+        <div class="col-xs-3 column-padding">
+          <button class="btn-equal" onclick='perform_calculation()'>
+            <b> =</b>
+          </button>
+          <p id="array-devide"></p>
+        </div>
+
+      </div>
+
+    </div>
+</body>
+
+</html>

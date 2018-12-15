@@ -1,0 +1,103 @@
+<!-- Author Name:Akshay D -->
+<!-- Code for calculator without precedence -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <link href="css/bootstrap.min.css" rel="stylesheet">
+  <link href="css/main.css" rel="stylesheet">
+  <script src="js/jquery.min.js"></script>
+  <script src="js/bootstrap.min.js"></script>
+  <script src="js/weather.js"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+
+<body onload="weather()">
+  <div class="container">
+    <div class="main_box" >
+    <div class="row">
+      <div class="col-xs-12 col-sm-4 col-class-padding text-center ">
+        <div class="blue_background">
+        <p id="day1" class="day_padding"></p>
+        <div id="img1" class="center-block"></div>
+        <div class="day_margin_main">
+        <span id="day1_reading_low"> </span>
+        <span id="day1_reading_high"> </span>
+      </div>
+      </div>
+    </div>
+      <div class="col-xs-12 col-sm-8 col-class-padding">
+        <div class="background_img">
+            <span <i class="fa fa-bars" style="font-size: 30px;float:right; padding-right: 20px;"aria-hidden="true"></i></span>
+            <p id="static_para1"></p>
+            <div class="city_dropdown">
+              <select id="selection" onchange="weather()">
+                <option value="bangalore">BANGALORE</option>
+                <option value="mangalore">MANGALORE</option>
+                <option value="chennai">CHENNAI</option>
+                <option value="goa">GOA</option>
+              </select>
+            </div>
+            
+        </div>   
+      </div
+      </div>
+      <div>
+      <div class="col-xs-12 col-sm-2 col-class-padding text-center other_days ">
+        <p id="day2" class="day_padding"></p>
+        <div id="img2" class="center-block"></div>
+        <div class="day_margin">
+          <span id="day2_reading_low"> </span>
+          <span id="day2_reading_high"> </span>
+        </div>
+      </div>
+      <div class="col-xs-12 col-sm-2 col-class-padding text-center other_days ">
+        <p id="day3" class="day_padding"></p>
+        <div id="img3" class="center-block"></div>
+        <div class="day_margin" >
+          <span id="day3_reading_low"> </span>
+          <span id="day3_reading_high"> </span>
+        </div>
+      </div>
+      <div class="col-xs-12 col-sm-2 col-class-padding text-center other_days">
+        <p id="day4" class="day_padding"></p>
+        <div id="img4" class="center-block"></div>
+        <div class="day_margin">
+          <span id="day4_reading_low"> </span>
+          <span id="day4_reading_high"> </span>
+        </div>
+      </div>
+      <div class="col-xs-12 col-sm-2 col-class-padding text-center other_days">
+        <p id="day5" class="day_padding"></p>
+        <div id="img5" class="center-block"></div>
+        <div class="day_margin">
+          <span id="day5_reading_low"> </span>
+          <span id="day5_reading_high"> </span>
+        </div>
+      </div>
+      <div class="col-xs-12 col-sm-2 col-class-padding text-center other_days ">
+        <p id="day6" class="day_padding"></p>
+        <div id="img6" class="center-block" ></div>
+        <div class="day_margin">
+          <span id="day6_reading_low"> </span>
+          <span id="day6_reading_high"> </span>
+        </div>
+      </div>
+      <div class="col-xs-12 col-sm-2 col-class-padding text-center other_days">
+        <p id="day7" class="day_padding"></p>
+        <div id="img7" class="center-block"></div>
+        <div class="day_margin">
+          <span id="day7_reading_low"> </span>
+          <span id="day7_reading_high"> </span>
+        </div>
+      </div>
+  </div>
+  </div>
+  </div>
+  </div>
+</body>
+</html>

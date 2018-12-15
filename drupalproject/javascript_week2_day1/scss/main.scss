@@ -1,0 +1,159 @@
+@import 'bootstrap/_variables';
+.bdr{
+    border: 1px solid red;
+}
+body{
+    color:blue;
+    background-color:#343F73;
+}
+
+.col-class-padding{
+    padding: 0;
+}
+.blue_background{
+ background-color: blue;
+ color:white;
+ height:300px;
+}
+
+.background_img{
+    background-image: url('../images/snow.jpg');
+    width:100%;
+    height:300px;
+    background-size: cover;
+    background-repeat: no-repeat;
+    color:white;
+
+
+}
+#static_para1{
+    font-size:20px;
+    box-sizing:border-box;
+    padding: 30px;
+    padding-bottom: 0;
+}
+#static_para2{
+    font-size:25px;
+    font-weight: bold;
+    box-sizing:border-box;
+    padding: 10px;
+    padding-top:0;
+
+}
+.main_box{
+    box-sizing: border-box;
+    margin:60px auto;     
+}
+
+.day_padding{
+    padding-top: 10px;
+}
+
+#day1{
+    font-size:20px;
+
+}
+.other_days{
+    background-color: white;
+}
+// #day1_logo{
+//     position: absolute;
+//     left:70px;
+// }
+// #day2_logo{
+//     position: absolute;
+//     left:-190px;
+//     top:0px;
+// }
+ .day_margin_main{
+     position: absolute;
+   font-size: 25px;
+   top:85%;
+   left:40%;
+ }
+// .day_margin{
+//     margin-top:170px;
+// }
+
+
+// #day3_logo{
+//     position: absolute;
+//     left:-190px;
+//     top:0px;
+// }
+// #day4_logo{
+//     position: absolute;
+//     left:-390px;
+//     top:0px;
+// }
+// #day5_logo{
+//     position: absolute;
+//     left:-390px;
+//     top:0px;
+// }
+
+// #day6_logo{
+//     position: absolute;
+//     left:-590px;
+//     top:0px;
+// }
+
+// #day7_logo{
+//     position: absolute;
+//     left:-590px;
+//     top:0px;
+// }
+
+#img1{
+    width:150px;
+    height:180px;
+}
+
+#img2
+{
+    width:150px;
+    height:120px;
+
+}
+
+#img3
+{
+    width:150px;
+    height:120px;
+
+}
+
+#img4
+{
+    width:150px;
+    height:120px;
+
+}
+
+#img5
+{
+    width:150px;
+    height:120px;
+
+}
+
+#img6
+{
+    width:150px;
+    height:120px;
+
+}
+
+#img7
+{
+    width:150px;
+    height:120px;
+
+}
+.city_dropdown{
+ position: absolute;
+ font-size: 25px;
+ left:30px;
+ color:blue;
+
+}

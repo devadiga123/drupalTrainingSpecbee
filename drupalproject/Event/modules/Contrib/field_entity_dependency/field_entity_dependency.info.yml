@@ -1,0 +1,12 @@
+name: Field Entity Dependency
+type: module
+description: This module allows to create dependent select field.
+# core: 8.x
+package: other
+dependencies:
+  - field
+# Information added by Drupal.org packaging script on 2018-05-04
+version: '8.x-1.x-dev'
+core: '8.x'
+project: 'field_entity_dependency'
+datestamp: 1525453086

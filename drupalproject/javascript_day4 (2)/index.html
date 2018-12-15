@@ -1,0 +1,109 @@
+<!-- Author Name:Akshay D -->
+<!-- date:10/08/2018 -->
+<!-- javascript Dom elements -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <link href="css/bootstrap.min.css" rel="stylesheet">
+  <link href="css/main.css" rel="stylesheet">
+  <script src="js/jquery.min.js"></script>
+  <script src="js/bootstrap.min.js"></script>
+</head>
+<body>
+  <section id="main">
+  </section>
+
+  <!-- script for DOM elements implementation starts here-->
+  <script>
+    
+    //  javascript for Dom elements implementation Starts here
+    var array_menu = ['HOME', 'STYLEDEMO', 'FULLWIDTH', 'DROPDOWN', 'PORTFOLIO', 'GALLERY'];
+
+    //  body tag for html with grey background
+    var body_ref = document.getElementsByTagName("BODY")[0];
+    body_ref.style.background = "grey";
+
+    // main section starts here
+    var section_ref = document.getElementById('main');
+
+    // top Header Div starts here 
+    var div_header = document.createElement("DIV");
+    section_ref.appendChild(div_header);
+    div_header.classList.add("header");
+
+    // Div created for headings
+    var div_headings = document.createElement("DIV");
+    section_ref.appendChild(div_headings);
+    div_headings.classList.add("heading");
+
+    // Div created for inside heading 
+    var div_header_span1 = document.createElement("DIV");
+    var div_header_span2 = document.createElement("DIV");
+
+    div_headings.appendChild(div_header_span1);
+    div_header_span1.innerHTML = "The Modernist";
+    div_header_span1.classList.add("moderist");
+
+    div_headings.appendChild(div_header_span2);
+    div_header_span2.innerHTML = "Free Psd Website Template";
+    div_header_span2.classList.add("psd");
+
+    // Div created for Navigation 
+    var div_navbar = document.createElement("DIV");
+    section_ref.appendChild(div_navbar);
+    div_navbar.classList.add("menus");
+
+    // UL element created for menu
+    var div_navbar_ul = document.createElement("UL");
+    div_navbar.appendChild(div_navbar_ul);
+
+    // looping through multiple Li for Menu list
+    for (var i = 0; i < 6; i++) {
+      var div_navbar_li = document.createElement("LI");
+      div_navbar_ul.appendChild(div_navbar_li);
+      div_navbar_li.innerHTML = array_menu[i];
+      div_navbar_li.classList.add("links");
+    }
+    // Div created for left side text in main section
+    var div_text = document.createElement("DIV");
+    section_ref.appendChild(div_text);
+    div_text.classList.add("left-content");
+
+    // main section text heading
+    var div_text_heading = document.createElement("H1");
+    div_text.appendChild(div_text_heading);
+    div_text_heading.innerHTML = "Cursus penati <br> saccum nulla";
+
+    // main section text paragraph 
+    var div_text_para = document.createElement("P");
+    div_text.appendChild(div_text_para);
+    div_text_para.innerHTML = "Nullamlacus dui ipsum conseque loborrtis non euisque <br> morbi penas dapibulum orna.Urnaultrices quis<br> curabitur phasellentesque congue magnis vestibulum<br> quismodo nulla et feuglat adipiscinia pellentum leo.";
+    div_text_para.classList.add("para");
+
+    //main section text Button 
+    var div_text_button = document.createElement("BUTTON");
+    div_text.appendChild(div_text_button);
+    div_text_button.innerHTML = "Read More Here >>";
+    div_text_button.classList.add("button");
+
+    // Div for right side image in main section 
+    var div_image = document.createElement("DIV");
+    section_ref.appendChild(div_image);
+    div_image.classList.add("right-content");
+
+    // main section right side image 
+    var div_image_content = document.createElement("IMG");
+    div_image.appendChild(div_image_content);
+    div_image_content.classList.add("image");
+
+  </script>
+  <!-- Script ends Here -->
+
+</body>
+
+</html>
+<!-- Htmt parts of DOM elements implementation ends here -->

@@ -1,0 +1,103 @@
+<?php
+
+/**
+ * @file .
+ * Module file for adding numbers.
+ */
+
+use Drupal\Core\Form\FormStateInterface;
+
+/**
+ * Implements hook form_alter().
+ */
+function add_num_form_node_form_alter(&$form, &$form_state, $form_id) {
+  $form['field_sum']['#access'] = FALSE;
+  $form['field_status']['#access'] = FALSE;
+  $form['terms_of_use'] = [
+    '#type' => 'checkbox',
+    '#title' => t("I agree with the website's terms and conditions."),
+    '#required' => TRUE,
+  ];
+
+  $form['#validate'][] = 'add_num_form_validate';
+}
+
+/**
+ * Implements hook node_presave().
+ */
+function add_num_node_presave($node) {
+
+  $num1 = $node->get('field_field1')->getValue();
+  $num2 = $node->get('field_field2')->getValue();
+  $sum = $num1[0]['value'] + $num2[0]['value'];
+
+  $node->set('field_sum', $sum);
+  if ($node->isNew()) {
+    $node->set('field_status', 'CREATED');
+  }
+  else {
+    $node->set('field_status', 'UPDATED');
+  }
+}
+
+/**
+ * Validation form for numbers.
+ */
+function add_num_form_validate($form, FormStateInterface &$form_state) {
+
+  $num1 = $form_state->getValue('field_field1');
+  $num2 = $form_state->getValue('field_field2');
+  if (empty($num1[0]['value'])) {
+    $form_state->setErrorByName('field_field1', t('Please Enter number in field1.'));
+  }
+  if (empty($num2[0]['value'])) {
+    $form_state->setErrorByName('field_field2', t('Please Enter number in field2.'));
+  }
+}
+
+
+function add_num_node_access($node, $op, $account) {
+  return NODE_ACCESS_DENY;
+}
+
+//function add_num_node_access_records(\Drupal\node\NodeInterface $node) {
+//  // We only care about the node if it has been marked private. If not, it is
+//  // treated just like any other node and we completely ignore it.
+//
+// if ($node->private->value) {
+//    $grants = [];
+//    // Only published Catalan translations of private nodes should be viewable
+//    // to all users. If we fail to check $node->isPublished(), all users would be able
+//    // to view an unpublished node.
+//    if ($node->isPublished()) {
+//      $grants[] = [
+//        'realm' => 'example',
+//        'gid' => 1,
+//        'grant_view' => 1,
+//        'grant_update' => 1,
+//        'grant_delete' => 1,
+//        'langcode' => 'ca',
+//      ];
+//    }
+//    // For the example_author array, the GID is equivalent to a UID, which
+//    // means there are many groups of just 1 user.
+//    // Note that an author can always view his or her nodes, even if they
+//    // have status unpublished.
+//    if ($node->getOwnerId()) {
+//      $grants[] = [
+//        'realm' => 'example_author',
+//        'gid' => $node->getOwnerId(),
+//        'grant_view' => 1,
+//        'grant_update' => 1,
+//        'grant_delete' => 1,
+//        'langcode' => 'ca',
+//      ];
+//    }
+//
+//    return $grants;
+//    var_dump($grants);
+// }
+//}
+
+
+

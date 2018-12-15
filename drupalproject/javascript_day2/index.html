@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Page Title</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+   
+    
+    <script>
+         //  author:Akshay
+        // function desc:to find the length of array
+        function array_length()
+        {
+           
+
+           var arr=['akshay', 'arun', 'kiran','anand'];     
+           document.getElementById('len').innerHTML=arr.length;       
+        }
+        // function desc:array prototype use
+        function prototype_array()
+        {
+            var arr=['akshay', 'arun', 'kiran','anand'];     
+          
+            document.getElementById('prot').innerHTML=arr.third();
+
+
+        }
+        Array.prototype.third= function() {
+             return this[2];
+               };
+    // function desc:array from use
+    function array_from()
+        { 
+          
+            document.getElementById('ar_from').innerHTML=Array.from('akshay');
+        }
+       // function desc:array isarray use
+        function array_isarray()
+        { 
+            var ar1=Array.isArray([12, 25, 36]);
+            document.getElementById('array_isarray').innerHTML= ar1;
+        }
+       // function desc:array of use
+       function array_of()
+        { 
+            var ar1=Array.of('a1','a2');
+            document.getElementById('array_of').innerHTML= ar1;
+        }
+         // function desc:array concat use
+       function array_concat()
+        { 
+            var ar1=["akshay","arun"];
+            var ar2=["anush","mithun"];
+        
+            document.getElementById('array_of').innerHTML= ar1.concat(ar2);
+        }
+         // function desc:array copywithin use
+       function array_copywithin()
+        { 
+            var ar1=["akshay","arun","manoj","kiran","pradeep"];
+            
+        
+            document.getElementById('array_copywithin').innerHTML= ar1.copyWithin(0, 2, 4);
+        }
+        // function desc:array entries use
+       function array_entries()
+        { 
+            var ar1=["akshay","arun","manoj","kiran","pradeep"];
+            var iterator1 = ar1.entries();
+         document.getElementById('array_entries').innerHTML= iterator1.next().value;
+        }
+        // function desc:array every use
+       function array_every()
+        { 
+            function belowtwentyfive(currentValue) {
+                   return currentValue < 25;
+                      }
+            var ar1=[1,10,13,7,15];
+            document.getElementById('array_every').innerHTML= ar1.every(belowtwentyfive);
+        }    
+        // function desc:array fill use
+       function array_fill()
+        { 
+            var ar1=[1,10,33,7,15];
+
+            document.getElementById('array_fill').innerHTML= ar1.fill(0, 2, 4);
+        }  
+        // function desc:array filter use
+       function array_filter()
+        { 
+            var fruits=["mango","orange","banana","grapes"];
+            var result = fruits.filter(word => word.length > 5);
+
+            document.getElementById('array_filter').innerHTML= result;
+        }  
+        // function desc:array find use
+       function array_find()
+        { 
+            var num=[3,8,12,7,16];
+            var found = num.find(function(element) {
+                             return element > 5;
+                                    });
+
+            document.getElementById('array_find').innerHTML= found;
+        }  
+        // function desc:array find use*****************
+       function array_findind()
+        { 
+            var num=[3,8,12,7,16];
+            function numgt5(element) {
+                             return element > 5;
+                                    }
+                 alert(numgt5);
+            document.getElementById('array_findind').innerHTML= num.findIndex(numgt5);
+        }  
+        // function desc:array flat use*****************
+       function array_flat()
+        { 
+            var num=[3,8, ,12,7,16];
+            
+            document.getElementById('array_flat').innerHTML= num.flat();
+        }  
+        // function desc:array foreach use
+       function array_foreach()
+        { 
+            var num=[3,8,12,7,16];
+            num.forEach(function(element) {
+         document.getElementById('array_foreach').innerHTML+= element;
+         console.log(element);
+                                  });  
+        } 
+         // function desc:array includes use
+       function array_includes()
+        { 
+            var num=[3,8,12,7,16];
+           
+         document.getElementById('array_includes').innerHTML= num.includes(12);
+        
+        }   
+         // function desc:array indexof use
+       function array_indexof()
+        { 
+            var num=[3,8,12,7,16];
+           
+         document.getElementById('array_indexof').innerHTML= num.indexOf(12);
+        
+        }   
+         // function desc:array join use
+       function array_join()
+        { 
+            var fruits=["mango","orange","banana","grapes"];
+           
+         document.getElementById('array_join').innerHTML= fruits.join('-');
+        
+        }  
+    </script>
+</head>
+<body>
+
+    
+
+    <input type="button" value="Array Length" onclick="array_length()">
+    <p id="len"></p>
+    <input type="button" value="prototype" onclick="prototype_array()">
+    <p id="prot"></p>
+    <input type="button" value="array_from" onclick="array_from()">
+    <p id="ar_from"></p>
+    <input type="button" value="array_isarray" onclick="array_isarray()">
+    <p id="array_isarray"></p>
+    <input type="button" value="array_of" onclick="array_of()">
+    <p id="array_of"></p>
+    <input type="button" value="array_concat" onclick="array_concat()">
+    <p id="array_concat"></p>
+    <input type="button" value="array_copywithin" onclick="array_copywithin()">
+    <p id="array_copywithin"></p>
+    <input type="button" value="array_entries" onclick="array_entries()">
+    <p id="array_entries"></p>
+    <input type="button" value="array_every" onclick="array_every()">
+    <p id="array_every"></p>
+    <input type="button" value="array_fill" onclick="array_fill()">
+    <p id="array_fill"></p>
+    <input type="button" value="array_filter" onclick="array_filter()">
+    <p id="array_filter"></p>
+    <input type="button" value="array_find" onclick="array_find()">
+    <p id="array_find"></p>
+    <input type="button" value="array_findind" onclick="array_findind()">
+    <p id="array_find"></p>
+    <input type="button" value="array_flat" onclick="array_flat()">
+    <p id="array_flat"></p>
+    <input type="button" value="array_foreach" onclick="array_foreach()">
+    <p id="array_foreach"></p>
+    <input type="button" value="array_includes" onclick="array_includes()">
+    <p id="array_includes"></p>
+    <input type="button" value="array_indexof" onclick="array_indexof()">
+    <p id="array_indexof"></p>
+    <input type="button" value="array_join" onclick="array_join()">
+    <p id="array_join"></p>
+
+
+    
+</body>
+</html>

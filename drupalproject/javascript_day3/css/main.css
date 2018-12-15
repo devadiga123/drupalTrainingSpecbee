@@ -1,0 +1,102 @@
+.bdr {
+  border: 1px solid black; }
+
+body {
+  background-color: #F3002D; }
+
+.calc {
+  position: fixed;
+  top: 10%;
+  left: 0;
+  right: 0;
+  margin: auto; }
+
+.input-operation {
+  width: 100%;
+  height: 90px;
+  background-color: #36354D;
+  border: none;
+  color: white;
+  font-size: 25px;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px; }
+
+.input-result {
+  width: 100%;
+  height: 60px;
+  background-color: #36354D;
+  color: white;
+  font-size: 25px;
+  border: none; }
+
+.column-padding {
+  padding: 0px; }
+
+.btn-calc {
+  padding: 0px;
+  width: 100%;
+  height: 70px;
+  border: 1px solid white;
+  font-size: 20px; }
+
+.btn-num {
+  padding: 0px;
+  width: 100%;
+  height: 70px;
+  background-color: #eeeeee;
+  border: 1px solid white;
+  font-size: 20px; }
+
+.btn-equal {
+  padding: 0px;
+  width: 100%;
+  height: 70px;
+  background-color: #F3002D;
+  border: 1px solid white;
+  font-size: 20px;
+  border-bottom-right-radius: 10px; }
+
+.btn-zero {
+  padding: 0px;
+  width: 100%;
+  height: 70px;
+  background-color: #eeeeee;
+  border: 1px solid white;
+  font-size: 20px;
+  border-bottom-left-radius: 10px; }
+
+.curve-border {
+  border-radius: 5px; }
+
+@media (max-width: 768px) {
+  .btn-calc {
+    width: 100%;
+    height: 100%;
+    font-size: 13px; }
+
+  .btn-num {
+    width: 100%;
+    height: 100%;
+    font-size: 13px; }
+
+  .btn-equal {
+    width: 100%;
+    height: 100%;
+    font-size: 13px; }
+
+  .btn-zero {
+    width: 100%;
+    height: 100%;
+    font-size: 13px; }
+
+  .input-operation {
+    width: 100%;
+    height: 100%;
+    font-size: 17px; }
+
+  .input-result {
+    width: 100%;
+    height: 100%;
+    font-size: 17px; } }
+
+/*# sourceMappingURL=main.css.map */

@@ -1,0 +1,30 @@
+
+
+
+.top-menu{
+    display: block;
+    ul{
+        list-style-type: none;
+        li{
+            display: inline-block;
+            padding:10px;
+            color:blue;
+        }
+    }
+}
+.fa-icon{
+    font-size:24px;
+    color:#E6628A;
+}
+.navbar-default{
+    .navbar-brand{
+        width: 100px;
+        height: 50px;
+        padding: 5px;
+    }
+    ul{
+        li{
+            padding-left: 20px;
+        }
+    }
+}

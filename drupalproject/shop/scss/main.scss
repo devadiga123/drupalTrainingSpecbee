@@ -1,0 +1,92 @@
+@import 'bootstrap/_variables';
+@import 'layouts/header.scss';
+@import 'layouts/footer.scss';
+@import 'bootstrap/_glyphicons.scss';
+@import 'owl.carousel.min.scss';
+
+
+*{
+  box-sizing: border-box;
+}
+.bdr{
+  border:1px solid red;
+}
+
+.hero-section{
+  .carousel-indicators{
+    li:first-child{
+      background-color:$gray-base;
+    }
+  }
+  .carousel-indicators{
+    li:hover{
+      background-color:red;
+    }
+  }
+  .caro-img{
+    width:100%;
+     }
+  .caro-right{
+    width:100%;
+    height:auto;
+  }
+}
+
+.item-new
+{
+   
+    padding:15px;
+    
+    background-color:#fff;
+
+    .zoom:hover
+    {
+        transform:scale(1.05);
+        transition: 0.7s ease all;
+       
+      
+    }
+}
+
+.item-new:hover{
+    box-shadow: 2px 2px 5px;
+    border:1px solid red;
+
+}
+.slide-carousal{
+  padding:  0 30px;
+  .owl-nav{
+      display: block!important; 
+      .owl-prev{
+          position: absolute;
+          top: 30%;
+          border-radius: 50%;
+          background-color:rgb(214, 79, 79);
+          span{
+              font-size:40px;
+              
+          }
+      }
+      .owl-next{
+          position: absolute;
+          top:30%;
+          right: 30px;
+          span{
+              font-size:40px;
+          }
+        }
+      }
+    }
+
+@media (min-width: 768px) and (max-width: 991px) {
+  
+  }
+  
+  @media (min-width: 991px) and (max-width: 1200px) {
+
+  
+}
+
+@media (min-width: 1200px){
+
+}
